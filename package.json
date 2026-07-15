@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@tursodatabase/sync": "^0.7.0",
@@ -16,6 +23,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
