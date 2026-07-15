@@ -1,0 +1,56 @@
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "prek-validate"
+name = "Validate prek.toml"
+language = "system"
+entry = "prek validate-config"
+always_run = true
+pass_filenames = false
+priority = 0
+
+[[repos.hooks]]
+id = "mise-validate"
+name = "Validate mise.toml"
+language = "system"
+entry = "mise tasks validate"
+always_run = true
+pass_filenames = false
+priority = 5
+
+[[repos.hooks]]
+id = "gitleaks"
+name = "Gitleaks"
+language = "system"
+entry = "gitleaks git ."
+always_run = true
+pass_filenames = false
+priority = 10
+
+[[repos.hooks]]
+id = "biome"
+name = "Biome"
+language = "system"
+entry = "npm run check"
+always_run = true
+pass_filenames = false
+priority = 20
+
+[[repos.hooks]]
+id = "semgrep"
+name = "Semgrep"
+language = "system"
+entry = "semgrep --error ."
+always_run = true
+pass_filenames = false
+priority = 30
+
+[[repos.hooks]]
+id = "test"
+name = "Tests"
+language = "system"
+entry = "npm test"
+always_run = true
+pass_filenames = false
+priority = 40

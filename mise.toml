@@ -1,5 +1,12 @@
+[settings]
+experimental = true
+
 [tools]
 gitleaks = "8.30.1"
 node = "24.18.0"
+prek = "0.4.9"
 semgrep = "1.169.0"
 uv = "0.11.28"
+
+[hooks]
+enter = ["prek install"]
