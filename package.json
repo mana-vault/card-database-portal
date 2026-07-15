@@ -1,5 +1,5 @@
 {
-  "name": "card-database",
+  "name": "@mana-vault/card-database-portal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
